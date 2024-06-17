@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <div id="app-with-sidebar" class="app-with-sidebar" style="height: 80rem;">
-    <nav id="sidebar" class="sidebar sidebar--drawer">
+  <div class="app-with-sidebar" style="height: 80rem;">
+    <nav class="sidebar sidebar--drawer">
       <div class="sidebar__content sidebar__content--start">
         <br>
         <h1>Go Fish</h1>
@@ -26,37 +26,81 @@
       </div>
 
     </nav>
-    <div id="main">
-      <div id="players_feed">
-        <div id="players">
+    <div class="game">
+      <div class="game__players-feed">
+        <div class="game__players">
           <h1>Players</h1>
+          <div class="game__players-info">
+            <div class="game__players-info-hands">
+              <details class="accordion">
+                <summary>
+                  <span class="">Player1</span>
+                  <span>Cards: 7</span>
+                  <span>Books: 5</span>
+                  <span
+                    class="material-symbols-outlined icon--outlined icon--medium icon--weight-normal icon--normal-emphasis accordion__marker">arrow_right</span>
+                </summary>
+                <div class="game__cards-content">
+                  <div class="playing-cards"></div>
+                  <div class="playing-cards"></div>
+                  <div class="playing-cards"></div>
+                  <div class="playing-cards"></div>
+                  <div class="playing-cards"></div>
+                </div>
+              </details>
+              <details class="accordion">
+                <summary>
+                  <span class="">Player2</span>
+                  <span>Cards: 5</span>
+                  <span
+                    class="material-symbols-outlined icon--outlined icon--medium icon--weight-normal icon--normal-emphasis accordion__marker">arrow_right</span>
+                </summary>
+                Some cards
+              </details>
+              <details class="accordion">
+                <summary>
+                  <span class="">Player3</span>
+                  <span>Cards: 7</span>
+                  <span
+                    class="material-symbols-outlined icon--outlined icon--medium icon--weight-normal icon--normal-emphasis accordion__marker">arrow_right</span>
+                </summary>
+                Some cards
+              </details>
+            </div>
+            <footer>Hand</footer>
+          </div>
         </div>
-        <div id="feed">
-          <h1>Feed</h1>
-          <div id="chat">
+        <div class="game__feed">
+          <h1>Game Feed</h1>
+          <div class="game__feed-chat">
+            <div>
+              <span>Scott asks Hunter if they have any 8s</span>
+            </div>
+            <div>
+              <textarea placeholder="Textarea" class="form-control"></textarea>
+            </div>
           </div>
         </div>
       </div>
-      <div id="cards">
-        <div id="cards-content">
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
+      <div class="game__cards">
+        <div class="game__cards-content">
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
         </div>
-        <div id="cards-content">
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
+        <div class="game__cards-content">
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
+          <div class="playing-cards"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- <script type="module" src="/main.js"></script> -->
 </body>
 
 </html>

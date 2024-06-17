@@ -1,64 +1,96 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-.rectangle {
-  width: calc(10 * var(--op-size-unit)); // 4rem
-  height: 100%;
+// TODO: If it's margin, padding, sizing, use the closest scale to that. Width and height...
+// TODO: game__feed-window
+// TODO: Look up semantic html -> mdn
+// TODO: web.dev/patterns
+
+.playing-cards {
+  width: calc(20 * var(--op-size-unit)); // 4rem
+  height: auto;
   background-color: azure;
   border: 2px solid black;
 }
 
-#sidebar {
+.sidebar {
   z-index: 1;
   box-shadow: 15px -5px 20px -20px rgba(0, 0, 0, 0.45);
 }
 
-#main {
+.game {
   display: flex;
   flex-direction: column;
 }
 
-#players_feed {
-  flex: 6;
+.game__players-feed {
   display: flex;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 3rem;
-  gap: 2rem;
+  flex-grow: 5;
+  margin-left: var(--op-space-2x-large); // 2rem
+  margin-right: var(--op-space-2x-large); // 2rem
+  margin-top: var(--op-space-2x-large); // 3rem
+  gap: var(--op-space-2x-large);
 }
 
-#players {
-  flex: 3;
+.game__players {
+  flex-grow: 7;
   background-color: var(--op-color-primary-plus-six);
   color: var(--op-color-primary-on-plus-six);
-}
-
-#feed {
-  flex: 2;
-  background-color: lightblue;
-}
-
-#cards {
-  flex: 2;
-  background-color: gainsboro;
-  border-top: 2px solid lightgray;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: var(--op-space-x-small);
+}
+
+.game__players-info {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-#cards-content {
-  display: flex;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  height: 80%;
-}
-
-#feed {
+.game__feed {
+  flex-grow: 1;
+  background-color: lightblue;
   display: flex;
   flex-direction: column;
 }
 
-#chat {
-  background-color: lightgreen;
-  flex: 1;
+
+.game__cards {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--op-color-neutral-plus-six);
+  color: var(--op-color-neutral-on-plus-six);
+  border-top: 2px solid lightgray;
+}
+
+.game__cards-content {
+  display: flex;
+  height: 80%;
+  margin-left: var(--op-space-2x-large); // 2rem
+  margin-right: var(--op-space-2x-large); // 2rem
+}
+
+.game__feed-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: var(--op-space-x-small);
+  background-color: var(--op-color-alerts-notice-plus-six);
+  color: var(--op-color-alerts-notice-on-plus-six);
+  border: 1px solid var(--op-color-alerts-notice-original);
+  border-top-left-radius: var(--op-radius-large);
+  border-top-right-radius: var(--op-radius-large);
+}
+
+.accordion {
+  border: 1px solid var(--op-color-neutral-plus-two);
+  border-radius: var(--op-radius-medium);
+}
+
+.accordion summary {
+  display: block !important;
 }
