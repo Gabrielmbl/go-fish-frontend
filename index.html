@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/style.scss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Fish</title>
+</head>
+
+<body>
+  <div id="app-with-sidebar" class="app-with-sidebar" style="height: 80rem;">
+    <nav id="sidebar" class="sidebar sidebar--drawer">
+      <div class="sidebar__content sidebar__content--start">
+        <br>
+        <h1>Go Fish</h1>
+        <button class="btn btn--no-border"><span class="material-symbols-outlined">circle</span>Games</button>
+        <button class="btn btn--no-border"><span class="material-symbols-outlined ">change_history</span>Stats</button>
+      </div>
+
+      <div class="sidebar__content sidebar__content--end">
+        <div class="divider divider--medium"></div>
+        <button class="btn btn--no-border"><span class="material-symbols-outlined ">square</span>Profile</button>
+        <button class="btn btn--no-border"><span class="material-symbols-outlined">logout</span>Logout</button>
+      </div>
+
+    </nav>
+    <div id="main">
+      <div id="players_feed">
+        <div id="players">
+          <h1>Players</h1>
+        </div>
+        <div id="feed">
+          <h1>Feed</h1>
+          <div id="chat">
+          </div>
+        </div>
+      </div>
+      <div id="cards">
+        <div id="cards-content">
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+        </div>
+        <div id="cards-content">
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script type="module" src="/main.js"></script> -->
+</body>
+
+</html>

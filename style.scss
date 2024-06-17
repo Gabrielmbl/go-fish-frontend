@@ -1,0 +1,64 @@
+@import "@rolemodel/optics/dist/scss/optics.scss";
+
+.rectangle {
+  width: calc(10 * var(--op-size-unit)); // 4rem
+  height: 100%;
+  background-color: azure;
+  border: 2px solid black;
+}
+
+#sidebar {
+  z-index: 1;
+  box-shadow: 15px -5px 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
+#players_feed {
+  flex: 6;
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+#players {
+  flex: 3;
+  background-color: var(--op-color-primary-plus-six);
+  color: var(--op-color-primary-on-plus-six);
+}
+
+#feed {
+  flex: 2;
+  background-color: lightblue;
+}
+
+#cards {
+  flex: 2;
+  background-color: gainsboro;
+  border-top: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#cards-content {
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  height: 80%;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+}
+
+#chat {
+  background-color: lightgreen;
+  flex: 1;
+}
