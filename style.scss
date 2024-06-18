@@ -1,138 +1,25 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-// TODO: Use sizing for width and height
-// TODO: Look up semantic html -> mdn
-// TODO: web.dev/patterns
-
-// TODO: Use box shadow for borders
-
-.playing-cards {
-  width: calc(20 * var(--op-size-unit)); // 4rem
-  height: auto;
-  background-color: azure;
-  box-shadow: var(--op-border-all) var(--op-color-border);
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  grid-template-rows: 1fr 250px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.accordion-playing-cards {
-  // width: 10%;
-  width: auto;
-  height: auto;
-  background-color: azure;
-  box-shadow: var(--op-border-all) var(--op-color-border);
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-.sidebar {
-  z-index: 1;
-  box-shadow: 15px -5px 20px -20px rgba(0, 0, 0, 0.45);
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
 }
 
-.game {
-  display: flex;
-  flex-direction: column;
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
 }
 
-.game__players-feed {
-  display: flex;
-  flex-grow: 5;
-  margin-left: var(--op-space-2x-large); // 2rem
-  margin-right: var(--op-space-2x-large); // 2rem
-  margin-top: var(--op-space-2x-large); // 3rem
-  gap: var(--op-space-2x-large);
-}
-
-.game__players {
-  flex-grow: 7;
-  background-color: var(--op-color-neutral-plus-seven);
-  color: var(--op-color-neutral-on-plus-seven);
-  display: flex;
-  flex-direction: column;
-  padding: var(--op-space-x-small);
-}
-
-.game__players-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.game__prompt {
-  display: flex;
-  flex-direction: column;
-  padding: var(--op-space-medium);
-  background-color: var(--op-color-alerts-info-plus-six);
-  color: var(--op-color-alerts-info-on-plus-six);
-  box-shadow: var(--op-border-all) var(--op-color-border);
-  border-radius: var(--op-radius-medium);
-}
-
-.game__players-info {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.game__feed {
-  flex-grow: 1;
-  background-color: var(--op-color-neutral-plus-seven);
-  color: var(--op-color-neutral-on-plus-seven);
-  display: flex;
-  flex-direction: column;
-}
-
-
-.game__cards {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 3;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--op-color-neutral-plus-six);
-  color: var(--op-color-neutral-on-plus-six);
-  box-shadow: var(--op-border-top) var(--op-color-border);
-}
-
-.game__cards-content {
-  display: flex;
-  height: 80%;
-  margin-left: var(--op-space-2x-large); // 2rem
-  margin-right: var(--op-space-2x-large); // 2rem
-}
-
-.game__feed-chat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  padding: var(--op-space-x-small);
-  background-color: var(--op-color-alerts-notice-plus-six);
-  color: var(--op-color-alerts-notice-on-plus-six);
-  box-shadow: var(--op-border-all) var(--op-color-border);
-  border-top-left-radius: var(--op-radius-large);
-  border-top-right-radius: var(--op-radius-large);
-}
-
-.accordion {
-  padding: var(--op-space-x-small);
-  box-shadow: var(--op-border-bottom) var(--op-color-border);
-}
-
-.game__players-info-hands {
-  box-shadow: var(--op-border-all) var(--op-color-border);
-  border-radius: var(--op-radius-medium);
-}
-
-.accordion-content {
-  display: flex;
-  flex-direction: row;
-  padding: var(--op-space-x-small);
-  gap: var(--op-space-small);
-  background-color: var(--op-color-alerts-info-plus-six);
-  color: var(--op-color-alerts-info-on-plus-six);
-  box-shadow: var(--op-border-all) var(--op-color-border);
-  border-radius: var(--op-radius-medium);
-}
-
-.accordion summary {
-  display: flex;
-  justify-content: space-between;
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
 }
