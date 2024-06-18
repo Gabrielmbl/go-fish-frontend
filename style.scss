@@ -88,7 +88,7 @@
   justify-content: space-between;
   background-color: var(--op-color-neutral-plus-six);
   color: var(--op-color-neutral-on-plus-six);
-  border-top: 2px solid lightgray;
+  box-shadow: var(--op-border-top) var(--op-color-border);
 }
 
 .game__cards-content {
