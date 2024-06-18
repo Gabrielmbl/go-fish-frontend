@@ -1,25 +1,64 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-.parent {
+:root {
+  --gf--main-column-width: calc(180 * var(--op-size-unit));
+  --gf--main-row-height: calc(100 * var(--op-size-unit)); // 44px
+  --gf--box-shadow: var(--op-border-all) var(--op-color-border);
+}
+
+.game-view {
   display: grid;
-  grid-template-columns: 1fr 460px;
-  grid-template-rows: 1fr 250px;
+  grid-template-columns: 1fr var(--gf--main-column-width);
+  grid-template-rows: 1fr var(--gf--main-row-height);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  height: 100vh;
+  overflow: auto;
 }
 
-.div1 {
+.game-board {
   grid-area: 1 / 1 / 2 / 2;
+  box-shadow: var(--gf--box-shadow);
 }
 
-.div2 {
+.game-feed {
   grid-area: 1 / 2 / 2 / 3;
+
+  box-shadow: var(--gf--box-shadow);
 }
 
-.div3 {
+.game-board,
+.game-feed {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 12fr;
+}
+
+.player-hand {
   grid-area: 2 / 1 / 3 / 2;
+  box-shadow: var(--gf--box-shadow);
 }
 
-.div4 {
+.player-books {
   grid-area: 2 / 2 / 3 / 3;
+  box-shadow: var(--gf--box-shadow);
+}
+
+.player-hand,
+.player-books {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+}
+
+[class$="header"] {
+  box-shadow: var(--gf--box-shadow);
+}
+
+.card-stack {
+  display: flex;
+}
+
+.playing-card {
+  box-shadow: var(--gf--box-shadow);
 }
