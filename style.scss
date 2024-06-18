@@ -3,7 +3,7 @@
 // TODO: Ask if it is better to use fr for width and height for game feed width and hand and books height
 
 :root {
-  --gf--main-column-width: calc(180 * var(--op-size-unit));
+  --gf--main-column-width: calc(110 * var(--op-size-unit));
   --gf--main-row-height: calc(100 * var(--op-size-unit));
   --gf--box-shadow: var(--op-border-all) var(--op-color-border);
 }
@@ -32,7 +32,7 @@
   grid-area: 1 / 2 / 2 / 3;
 
   box-shadow: var(--gf--box-shadow);
-  background-color: var(--op-color-primary-plus-seven);
+  background-color: var(--op-color-primary-plus-eight);
   color: var(--op-color-primary-on-plus-seven);
 }
 
@@ -51,6 +51,35 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 12fr;
+}
+
+.game-feed__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: var(--op-space-medium);
+
+  overflow: auto;
+}
+
+.game-feed__section__actions__form__selectors {
+  display: flex;
+  gap: var(--op-space-medium);
+}
+
+.game-feed__section__actions__form {
+  background-color: var(--op-color-primary-plus-seven);
+  box-shadow: var(--gf--box-shadow);
+  border-radius: var(--op-radius-2x-large);
+  display: flex;
+  padding: var(--op-space-small);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--op-space-small);
+  align-self: stretch;
 }
 
 .player-hand {
