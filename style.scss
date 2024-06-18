@@ -12,6 +12,14 @@
   border: 2px solid black;
 }
 
+.accordion-playing-cards {
+  // width: 10%;
+  width: auto;
+  height: auto;
+  background-color: azure;
+  border: 2px solid black;
+}
+
 .sidebar {
   z-index: 1;
   box-shadow: 15px -5px 20px -20px rgba(0, 0, 0, 0.45);
@@ -33,8 +41,8 @@
 
 .game__players {
   flex-grow: 7;
-  background-color: var(--op-color-primary-plus-six);
-  color: var(--op-color-primary-on-plus-six);
+  background-color: var(--op-color-neutral-plus-seven);
+  color: var(--op-color-neutral-on-plus-seven);
   display: flex;
   flex-direction: column;
   padding: var(--op-space-x-small);
@@ -91,6 +99,17 @@
   border-radius: var(--op-radius-medium);
 }
 
+
+.accordion-content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--op-space-small);
+  background-color: var(--op-color-alerts-info-plus-six);
+  color: var(--op-color-alerts-info-on-plus-six);
+  border: 1px solid var(--op-color-neutral-plus-two);
+}
+
 .accordion summary {
-  display: block !important;
+  display: flex;
+  justify-content: space-between;
 }
