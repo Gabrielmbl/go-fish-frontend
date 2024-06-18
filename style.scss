@@ -112,10 +112,14 @@
 
 .accordion {
   padding: var(--op-space-x-small);
+  border-bottom: 1px solid var(--op-color-neutral-plus-two);
+  // border-radius: var(--op-radius-medium);
+}
+
+.game__players-info-hands {
   border: 1px solid var(--op-color-neutral-plus-two);
   border-radius: var(--op-radius-medium);
 }
-
 
 .accordion-content {
   display: flex;
