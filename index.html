@@ -2,55 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="/style.scss" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Go Fish</title>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<link rel="stylesheet" href="/style.scss" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Go Fish</title>
 </head>
 
 <body>
-  <div class="game-view">
-    <div class="game-board">
-      <div class="game-board__header">
-        <h1>Game 1</h1>
-      </div>
-      <div class="game-board__player-decks">
-        <div class="game-board__player-decks__header">
-          <span>Players</span>
-        </div>
-        <div class="game-board__player-decks__player-hands">
-          <span>Gabriel</span>
-        </div>
-      </div>
-    </div>
-    <div class="game-feed">
-      <div class="game-feed__header">
-        <h2>Game Feed</h2>
-      </div>
-      <div class="game-feed__section">
-        <span>Feed Section</span>
-      </div>
-    </div>
-    <div class="player-hand">
-      <div class="hand-header">
-        <h2>Your Hand</h2>
-      </div>
-      <div class="card-stack">
-        <span>cards</span>
-      </div>
-    </div>
-    <div class="player-books">
-      <div class="book-header">
-        <h2>Books</h2>
-      </div>
-      <div class="card-stack">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-        <img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
-      </div>
-    </div>
-  </div>
+	<div class="game-view">
+		<div class="game-board">
+			<div class="game-board__header">
+				<div class="game-board__header__content">
+					<div class="back-arrow">&#8592;</div>
+					<span>Game 1</span>
+				</div>
+			</div>
+			<div class="game-board__player-decks">
+				<div class="game-board__player-decks__header-label">
+					<span>Players</span>
+				</div>
+				<div class="game-board__player-decks__player-hands">
+					<span>Gabriel</span>
+				</div>
+			</div>
+		</div>
+		<div class="game-feed">
+			<div class="game-feed__header">
+				<div class="game-feed__header__content">
+					<span>Game Feed</span>
+					<button class="btn btn-primary btn--medium">Your Turn</button>
+				</div>
+			</div>
+			<div class="game-feed__section">
+				<span>Feed Section</span>
+			</div>
+		</div>
+		<div class="player-hand">
+			<div class="hand-header">
+				<span>Your Hand</span>
+			</div>
+			<div class="card-stack">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+			</div>
+		</div>
+		<div class="player-books">
+			<div class="book-header">
+				<span>Books</span>
+			</div>
+			<div class="card-stack">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+				<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
