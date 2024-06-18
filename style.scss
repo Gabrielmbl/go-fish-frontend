@@ -1,15 +1,16 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-// TODO: If it's margin, padding, sizing, use the closest scale to that. Width and height...
-// TODO: game__feed-window
+// TODO: Use sizing for width and height
 // TODO: Look up semantic html -> mdn
 // TODO: web.dev/patterns
+
+// TODO: Use box shadow for borders
 
 .playing-cards {
   width: calc(20 * var(--op-size-unit)); // 4rem
   height: auto;
   background-color: azure;
-  border: 2px solid black;
+  box-shadow: var(--op-border-all) var(--op-color-border);
 }
 
 .accordion-playing-cards {
@@ -17,7 +18,7 @@
   width: auto;
   height: auto;
   background-color: azure;
-  border: 2px solid black;
+  box-shadow: var(--op-border-all) var(--op-color-border);
 }
 
 .sidebar {
@@ -59,7 +60,7 @@
   padding: var(--op-space-medium);
   background-color: var(--op-color-alerts-info-plus-six);
   color: var(--op-color-alerts-info-on-plus-six);
-  border: 1px solid var(--op-color-neutral-plus-two);
+  box-shadow: var(--op-border-all) var(--op-color-border);
   border-radius: var(--op-radius-medium);
 }
 
@@ -105,19 +106,18 @@
   padding: var(--op-space-x-small);
   background-color: var(--op-color-alerts-notice-plus-six);
   color: var(--op-color-alerts-notice-on-plus-six);
-  border: 1px solid var(--op-color-alerts-notice-original);
+  box-shadow: var(--op-border-all) var(--op-color-border);
   border-top-left-radius: var(--op-radius-large);
   border-top-right-radius: var(--op-radius-large);
 }
 
 .accordion {
   padding: var(--op-space-x-small);
-  border-bottom: 1px solid var(--op-color-neutral-plus-two);
-  // border-radius: var(--op-radius-medium);
+  box-shadow: var(--op-border-bottom) var(--op-color-border);
 }
 
 .game__players-info-hands {
-  border: 1px solid var(--op-color-neutral-plus-two);
+  box-shadow: var(--op-border-all) var(--op-color-border);
   border-radius: var(--op-radius-medium);
 }
 
@@ -128,7 +128,8 @@
   gap: var(--op-space-small);
   background-color: var(--op-color-alerts-info-plus-six);
   color: var(--op-color-alerts-info-on-plus-six);
-  border: 1px solid var(--op-color-neutral-plus-two);
+  box-shadow: var(--op-border-all) var(--op-color-border);
+  border-radius: var(--op-radius-medium);
 }
 
 .accordion summary {
