@@ -48,6 +48,20 @@
   padding: var(--op-space-x-small);
 }
 
+.game__players-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game__prompt {
+  display: flex;
+  flex-direction: column;
+  padding: var(--op-space-medium);
+  background-color: var(--op-color-alerts-info-plus-six);
+  color: var(--op-color-alerts-info-on-plus-six);
+  border: 1px solid var(--op-color-neutral-plus-two);
+}
+
 .game__players-info {
   display: flex;
   flex-grow: 1;
@@ -57,7 +71,8 @@
 
 .game__feed {
   flex-grow: 1;
-  background-color: lightblue;
+  background-color: var(--op-color-neutral-plus-seven);
+  color: var(--op-color-neutral-on-plus-seven);
   display: flex;
   flex-direction: column;
 }
