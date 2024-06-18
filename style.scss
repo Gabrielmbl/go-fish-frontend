@@ -60,6 +60,7 @@
   background-color: var(--op-color-alerts-info-plus-six);
   color: var(--op-color-alerts-info-on-plus-six);
   border: 1px solid var(--op-color-neutral-plus-two);
+  border-radius: var(--op-radius-medium);
 }
 
 .game__players-info {
@@ -81,7 +82,7 @@
 .game__cards {
   display: flex;
   flex-direction: row;
-  flex-grow: 2;
+  flex-grow: 3;
   align-items: center;
   justify-content: space-between;
   background-color: var(--op-color-neutral-plus-six);
@@ -110,6 +111,7 @@
 }
 
 .accordion {
+  padding: var(--op-space-x-small);
   border: 1px solid var(--op-color-neutral-plus-two);
   border-radius: var(--op-radius-medium);
 }
@@ -118,6 +120,7 @@
 .accordion-content {
   display: flex;
   flex-direction: row;
+  padding: var(--op-space-x-small);
   gap: var(--op-space-small);
   background-color: var(--op-color-alerts-info-plus-six);
   color: var(--op-color-alerts-info-on-plus-six);
