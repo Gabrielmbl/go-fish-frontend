@@ -1,10 +1,10 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
 // TODO: Ask if it is better to use fr for width and height for game feed width and hand and books height
-
+// TODO: Fix naming -> use dashes instead of nesting
 :root {
-  --gf--main-column-width: calc(110 * var(--op-size-unit));
-  --gf--main-row-height: calc(100 * var(--op-size-unit));
+  --gf--main-column-width: calc(84 * var(--op-size-unit));
+  --gf--main-row-height: calc(64 * var(--op-size-unit));
   --gf--box-shadow: var(--op-border-all) var(--op-color-border);
 }
 
@@ -21,10 +21,20 @@
 .game-board {
   grid-area: 1 / 1 / 2 / 2;
   box-shadow: var(--gf--box-shadow);
+
+  overflow: auto;
 }
 
-.game-board__header__content {
+.game-board__header {
+  box-shadow: var(--gf--box-shadow);
+}
+
+.game-board__header-content {
   display: flex;
+
+  padding-left: var(--op-space-small);
+  align-content: center;
+  font-size: var(--op-font-2x-large);
   gap: var(--op-space-small);
 }
 
@@ -33,14 +43,14 @@
 
   box-shadow: var(--gf--box-shadow);
   background-color: var(--op-color-primary-plus-eight);
-  color: var(--op-color-primary-on-plus-seven);
+  color: var(--op-color-primary-on-plus-eight);
 }
 
 .game-feed__header {
   padding-right: var(--op-space-small);
 }
 
-.game-feed__header__content {
+.game-feed__header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,28 +61,36 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 12fr;
+
+  overflow: auto;
 }
 
 .game-feed__section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4fr 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  gap: 0;
+
   padding: var(--op-space-medium);
 
   overflow: auto;
 }
 
+.game-feed__section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--op-space-x-small);
+  align-self: stretch;
+}
+
 .game-feed__section__actions__form__selectors {
   display: flex;
+  align-items: flex-start;
   gap: var(--op-space-medium);
 }
 
 .game-feed__section__actions__form {
-  background-color: var(--op-color-primary-plus-seven);
-  box-shadow: var(--gf--box-shadow);
-  border-radius: var(--op-radius-2x-large);
   display: flex;
   padding: var(--op-space-small);
   flex-direction: column;
@@ -80,6 +98,10 @@
   align-items: center;
   gap: var(--op-space-small);
   align-self: stretch;
+
+  border-radius: var(--op-radius-x-large);
+  box-shadow: var(--gf--box-shadow);
+  background: var(--op-color-primary-plus-seven);
 }
 
 .player-hand {
@@ -102,7 +124,17 @@
   color: var(--op-color-neutral-on-plus-seven);
 }
 
-[class$="header"] {
+// TODO: Dont do this. Use individual .header1, .header2
+.game-feed__header,
+.hand-header,
+.book-header {
+  box-shadow: var(--gf--box-shadow);
+  padding-left: var(--op-space-small);
+  align-content: center;
+  font-size: var(--op-font-2x-large);
+}
+
+.content-header {
   box-shadow: var(--gf--box-shadow);
   padding-left: var(--op-space-small);
   align-content: center;

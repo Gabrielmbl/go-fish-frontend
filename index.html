@@ -9,11 +9,11 @@
 	<title>Go Fish</title>
 </head>
 
-<body>
+<body class="app-body">
 	<div class="game-view">
 		<div class="game-board">
 			<div class="game-board__header">
-				<div class="game-board__header__content">
+				<div class="game-board__header-content">
 					<div class="back-arrow">&#8592;</div>
 					<span>Game 1</span>
 				</div>
@@ -29,13 +29,16 @@
 		</div>
 		<div class="game-feed">
 			<div class="game-feed__header">
-				<div class="game-feed__header__content">
+				<div class="game-feed__header-content">
 					<span>Game Feed</span>
-					<button class="btn btn-primary btn--medium">Your Turn</button>
+					<button class="btn btn-primary btn--small">Your Turn</button>
 				</div>
 			</div>
 			<div class="game-feed__section">
 				<div class="game-feed__section__content">
+					<div class="game-feed__section__content__message">
+						<span>Scott asked Dominic for any 8s</span>
+					</div>
 					<span>Feed Section</span>
 				</div>
 				<div class="game-feed__section__actions">
@@ -45,12 +48,26 @@
 								<span>Player</span>
 								<select class="form-control form-control--large">
 									<option>Gabriel</option>
+									<option>Jullian</option>
+									<option>Dominic</option>
 								</select>
 							</div>
 							<div>
 								<span>Card Rank</span>
 								<select class="form-control form-control--large">
-									<option>Seven</option>
+									<option>Two</option>
+									<option>Three</option>
+									<option>Four</option>
+									<option>Five</option>
+									<option>Six</option>
+									<option selected>Seven</option>
+									<option>Eight</option>
+									<option>Nine</option>
+									<option>Ten</option>
+									<option>Jack</option>
+									<option>Queen</option>
+									<option>King</option>
+									<option>Ace</option>
 								</select>
 							</div>
 						</div>
