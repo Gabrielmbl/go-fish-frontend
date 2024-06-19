@@ -1,11 +1,12 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
-// TODO: Ask if it is better to use fr for width and height for game feed width and hand and books height
-// TODO: Fix naming -> use dashes instead of nesting
+// TODO: Fix naming of classes
+
 :root {
   --gf--main-column-width: calc(84 * var(--op-size-unit));
   --gf--main-row-height: calc(64 * var(--op-size-unit));
   --gf--box-shadow: var(--op-border-all) var(--op-color-border);
+  --gf--header-size: calc(15 * var(--op-size-unit)); // 60px
 }
 
 .game-view {
@@ -27,6 +28,7 @@
 
 .game-board__header {
   box-shadow: var(--gf--box-shadow);
+  align-content: center;
 }
 
 .game-board__header-content {
@@ -36,6 +38,46 @@
   align-content: center;
   font-size: var(--op-font-2x-large);
   gap: var(--op-space-small);
+}
+
+.game-board__player-decks__header {
+  font-size: var(--op-font-2x-large);
+}
+
+.game-board__player-decks__player-hands {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  gap: var(--op-space-x-small);
+}
+
+.game__players-info-hands {
+  box-shadow: var(--op-border-all) var(--op-color-border);
+  border-radius: var(--op-radius-medium);
+}
+
+.accordion {
+  // box-shadow: var(--op-border-bottom) var(--op-color-border);
+  border: 1px solid var(--op-color-border);
+  border-radius: var(--op-radius-medium);
+}
+
+.accordion summary {
+  padding: var(--op-space-x-small);
+}
+
+.accordion-content {
+  box-shadow: var(--gf--box-shadow);
+  border-radius: 0 0 var(--op-radius-medium) var(--op-radius-medium);
+}
+
+
+.game-board__player-decks {
+  display: flex;
+  padding: var(--op-space-2x-large) var(--op-space-3x-large) var(--op-space-4x-large) var(--op-space-3x-large);
+  flex-direction: column;
+  gap: var(--op-space-x-small);
+  align-self: stretch;
 }
 
 .game-feed {
@@ -59,17 +101,14 @@
 .game-board,
 .game-feed {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 12fr;
+  grid-template-rows: var(--gf--header-size) 1fr;
 
   overflow: auto;
 }
 
 .game-feed__section {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4fr 1fr;
-  gap: 0;
+  grid-template-rows: 1fr auto;
 
   padding: var(--op-space-medium);
 
@@ -81,7 +120,35 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--op-space-x-small);
-  align-self: stretch;
+  overflow: auto;
+}
+
+.game-feed__section__content__message {
+  padding: var(--op-space-small);
+  flex-wrap: wrap;
+  border-radius: var(--op-radius-x-large);
+}
+
+.indented-message {
+  display: flex;
+  gap: gap-xs;
+  padding-left: var(--op-space-small);
+
+}
+
+.blue-message {
+  background: var(--op-color-primary-plus-five);
+  color: var(--op-color-primary-on-plus-five);
+}
+
+.yellow-message {
+  background: var(--op-color-alerts-warning-plus-seven);
+  color: var(--op-color-alerts-warning-on-plus-seven);
+}
+
+.white-message {
+  background: var(--op-color-primary-plus-max);
+  color: var(--op-color-primary-on-plus-max);
 }
 
 .game-feed__section__actions__form__selectors {
@@ -102,6 +169,7 @@
   border-radius: var(--op-radius-x-large);
   box-shadow: var(--gf--box-shadow);
   background: var(--op-color-primary-plus-seven);
+  color: var(--op-color-primary-on-plus-seven);
 }
 
 .player-hand {
@@ -124,7 +192,6 @@
   color: var(--op-color-neutral-on-plus-seven);
 }
 
-// TODO: Dont do this. Use individual .header1, .header2
 .game-feed__header,
 .hand-header,
 .book-header {
