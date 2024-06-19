@@ -1,6 +1,33 @@
 @import "@rolemodel/optics/dist/scss/optics.scss";
 
 // TODO: Fix naming of classes
+// TODO: Add shadow to the bottom of the accordions
+// TODO: Add shadow to the bottom of the cards
+// TODO: Figure out the arrow in the selection box
+
+@mixin space-varieties {
+  --op-space-3x-small: 4px;
+  --op-space-2x-small: 8px;
+  --op-space-x-small: 16px;
+  --op-space-small: 24px;
+  --op-space-medium: 32px;
+  --op-space-large: 40px;
+  --op-space-x-large: 48px;
+  --op-space-2x-large: 56px;
+  --op-space-3x-large: 80px;
+  --op-space-4x-large: 160px;
+}
+
+@mixin color-varieties {
+  --op-color-primary-h: 216;
+  --op-color-primary-s: 58;
+  --op-color-primary-l: 38;
+}
+
+:root[data-theme='gabriel-dark'] {
+  @include space-varieties;
+  @include color-varieties;
+}
 
 :root {
   --gf--main-column-width: calc(84 * var(--op-size-unit));
@@ -28,18 +55,17 @@
 }
 
 .game-board__header {
-  box-shadow: var(--gf--box-shadow);
-  align-content: center;
-}
-
-.game-board__header-content {
   display: flex;
 
-  padding-left: var(--op-space-small);
-  align-content: center;
+  box-shadow: var(--gf--box-shadow);
+  height: var(--op-navbar-height);
+
+  padding: var(--op-space-2x-small) var(--op-space-medium);
+  align-items: center;
   font-size: var(--op-font-2x-large);
-  gap: var(--op-space-small);
+  gap: var(--op-space-x-small);
 }
+
 
 .game-board__player-decks__header {
   font-size: var(--op-font-medium);
@@ -91,13 +117,6 @@
 }
 
 
-// .accordion-content {
-//   display: flex;
-//   align-items: flex-start;
-//   gap: var(--op-space-x-large);
-// }
-
-
 .game-board__player-decks {
   display: flex;
   padding: var(--op-space-2x-large) var(--op-space-3x-large) 0 var(--op-space-3x-large);
@@ -118,14 +137,17 @@
 }
 
 .game-feed__header {
-  padding-right: var(--op-space-small);
-}
-
-.game-feed__header-content {
   display: flex;
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
+  height: var(--op-navbar-height);
+
+  box-shadow: var(--gf--box-shadow);
+  font-size: var(--op-font-2x-large);
+
   justify-content: space-between;
   align-items: center;
 }
+
 
 .game-board,
 .game-feed {
@@ -136,8 +158,9 @@
 }
 
 .game-feed__section {
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   padding: var(--op-space-medium);
 
@@ -154,15 +177,13 @@
 
 .game-feed__section__content__message {
   padding: var(--op-space-small);
-  flex-wrap: wrap;
   border-radius: var(--op-radius-x-large);
 }
 
 .indented-message {
   display: flex;
-  gap: gap-xs;
+  gap: var(--op-space-x-small);
   padding-left: var(--op-space-small);
-
 }
 
 .blue-message {
@@ -180,25 +201,26 @@
   color: var(--op-color-primary-on-plus-max);
 }
 
-.game-feed__section__actions__form__selectors {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--op-space-medium);
-}
 
-.game-feed__section__actions__form {
+.game-feed__section__actions {
   display: flex;
-  padding: var(--op-space-small);
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  padding: var(--op-space-small);
   gap: var(--op-space-small);
-  align-self: stretch;
 
   border-radius: var(--op-radius-x-large);
   box-shadow: var(--gf--box-shadow);
   background: var(--op-color-primary-plus-seven);
   color: var(--op-color-primary-on-plus-seven);
+}
+
+.input-collection {
+  display: flex;
+  gap: var(--op-space-small);
+}
+
+.form-group {
+  flex-grow: 1;
 }
 
 .player-hand {
@@ -222,11 +244,10 @@
   color: var(--op-color-neutral-on-plus-seven);
 }
 
-.game-feed__header,
 .hand-header,
 .book-header {
   box-shadow: var(--gf--box-shadow);
-  padding-left: var(--op-space-small);
+  padding: var(--op-space-small) var(--op-space-medium) var(--op-space-x-small) var(--op-space-medium);
   align-content: center;
   font-size: var(--op-font-2x-large);
 }
