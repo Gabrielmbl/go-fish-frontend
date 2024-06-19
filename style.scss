@@ -41,7 +41,7 @@
 }
 
 .game-board__player-decks__header {
-  font-size: var(--op-font-2x-large);
+  font-size: var(--op-font-medium);
 }
 
 .game-board__player-decks__player-hands {
@@ -57,30 +57,46 @@
 }
 
 .accordion {
-  // box-shadow: var(--op-border-bottom) var(--op-color-border);
-  border: 1px solid var(--op-color-border);
   border-radius: var(--op-radius-medium);
+  border: var(--op-border-width) solid var(--op-color-border);
+}
 
-  background-color: var(--op-color-neutral-plus-eight);
-  color: var(--op-color-neutral-on-plus-eight);
+.accordion[open] {
+  border: var(--op-border-width) solid var(--op-color-primary-plus-four);
+
+  summary {
+    border-bottom: var(--op-border-width) solid var(--op-color-primary-plus-four);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--op-color-primary-plus-eight);
+    color: var(--op-color-primary-on-plus-eight);
+
+    .accordion__marker {
+      border-radius: var(--op-radius-circle);
+      box-shadow: var(--op-border-all) var(--op-color-primary-plus-three);
+      background: var(--op-color-primary-plus-five);
+      color: var(--op-color-primary-on-plus-five);
+    }
+  }
 }
 
 .accordion summary {
   padding: var(--op-space-x-small);
+  gap: var(--op-space-x-large);
+  border-radius: var(--op-radius-medium);
 
-  background-color: var(--op-color-primary-plus-eight);
-  color: var(--op-color-primary-on-plus-eight);
+  background-color: var(--op-color-primary-plus-max);
+  color: var(--op-color-primary-on-plus-max);
 }
+
+
+
 
 .accordion-content {
   display: flex;
   padding: var(--op-space-small) var(--op-space-medium);
   align-items: flex-start;
   gap: var(--op-space-x-large);
-  // align-self: stretch;
-
-  box-shadow: var(--gf--box-shadow);
-  border-radius: 0 0 var(--op-radius-medium) var(--op-radius-medium);
 }
 
 
@@ -91,6 +107,8 @@
   gap: var(--op-space-x-small);
   align-self: stretch;
   overflow: auto;
+
+  background-color: var(--op-color-card-white);
 }
 
 .game-feed {
