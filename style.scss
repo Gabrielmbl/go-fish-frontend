@@ -90,14 +90,11 @@
 }
 
 
-
-
-.accordion-content {
-  display: flex;
-  padding: var(--op-space-small) var(--op-space-medium);
-  align-items: flex-start;
-  gap: var(--op-space-x-large);
-}
+// .accordion-content {
+//   display: flex;
+//   align-items: flex-start;
+//   gap: var(--op-space-x-large);
+// }
 
 
 .game-board__player-decks {
@@ -206,6 +203,7 @@
 .player-hand {
   grid-area: 2 / 1 / 3 / 2;
   box-shadow: var(--gf--box-shadow);
+  overflow: auto;
 }
 
 .player-books {
@@ -239,15 +237,20 @@
   font-size: var(--op-font-2x-large);
 }
 
+.card-tray {
+  display: flex;
+  padding: var(--op-space-medium);
+
+  overflow: auto;
+}
 
 .card-stack {
   display: flex;
   gap: var(--op-space-small);
-  padding: var(--op-space-medium)
+
+  overflow: auto;
 }
 
 .playing-card {
   box-shadow: var(--gf--box-shadow);
-  height: 60%;
-  width: auto;
 }
