@@ -239,6 +239,7 @@
 
 .card-tray {
   display: flex;
+  justify-content: space-between;
   padding: var(--op-space-medium);
 
   overflow: auto;
@@ -249,6 +250,10 @@
   gap: var(--op-space-small);
 
   overflow: auto;
+
+  >*:not(:first-child) {
+    margin-left: calc(-1 * var(--op-space-3x-large));
+  }
 }
 
 .playing-card {
