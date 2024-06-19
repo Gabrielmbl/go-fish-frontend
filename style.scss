@@ -7,6 +7,7 @@
   --gf--main-row-height: calc(64 * var(--op-size-unit));
   --gf--box-shadow: var(--op-border-all) var(--op-color-border);
   --gf--header-size: calc(15 * var(--op-size-unit)); // 60px
+  --gf--playing-card-radius: calc(2 * var(--op-size-unit));
 }
 
 .game-view {
@@ -259,4 +260,5 @@
 
 .playing-card {
   box-shadow: var(--gf--box-shadow);
+  border-radius: var(--gf--playing-card-radius);
 }
