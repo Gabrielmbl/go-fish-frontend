@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- <html lang="en" data-theme-mode="light"> -->
-<html lang="en" data-theme-mode="dark" data-theme="gabriel-dark">
+<html lang="en" data-theme-mode="light">
+<!-- <html lang="en" data-theme-mode="dark" data-theme="gabriel-dark"> -->
 
 <head>
 	<meta charset="UTF-8" />
@@ -13,16 +13,16 @@
 <body class="app-body">
 	<div class="game-view">
 		<div class="game-board">
-			<div class="game-board__header">
+			<div class="board-header">
 				<div class="back-arrow">&#8592;</div>
 				<span>Game 1</span>
 			</div>
-			<div class="game-board__player-decks">
-				<div class="game-board__player-decks__header">
+			<div class="player-decks">
+				<div class="player-decks__header">
 					<span>Players</span>
 				</div>
 				<div class="divider divider--medium"></div>
-				<div class="game-board__player-decks__player-hands">
+				<div class="player-hands">
 					<details class="accordion">
 						<summary>
 							<span class="material-symbols-outlined accordion__marker">arrow_right</span>
@@ -46,7 +46,7 @@
 								<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
 								<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
 							</div>
-							<div class="card-stack">
+							<div class="card-stack card-stack--books">
 								<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
 								<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
 							</div>
@@ -158,84 +158,84 @@
 			</div>
 		</div>
 		<div class="game-feed">
-			<div class="game-feed__header">
+			<div class="game-feed-header">
 				<span>Game Feed</span>
 				<button class="btn btn-primary btn--small">Your Turn</button>
 			</div>
-			<div class="game-feed__section">
-				<div class="game-feed__section__content">
-					<div class="game-feed__section__content__message blue-message">
+			<div class="feed-section">
+				<div class="notifications">
+					<div class="message blue-message">
 						<span>Scott asked Dominic for any 8s</span>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message white-message">
+						<div class="message white-message">
 							You drew a 7 of Diamonds
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 					<div class="indented-message">
 						<span style="align-content: center;">&#8627;</span>
-						<div class="game-feed__section__content__message yellow-message">
+						<div class="message yellow-message">
 							Go Fish: Dominic doesn't have any 8s
 						</div>
 					</div>
 
 				</div>
-				<div class="game-feed__section__actions">
+				<div class="actions">
 					<div class="input-collection">
 						<div class="form-group">
 							<label for="player" class="form-label">Player</label>
@@ -288,7 +288,7 @@
 				<span>Books</span>
 			</div>
 			<div class="card-tray">
-				<div class="card-stack">
+				<div class="card-stack card-stack--books">
 					<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
 					<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
 					<img class="playing-card" src="https://via.placeholder.com/80x120" alt="Playing Card">
