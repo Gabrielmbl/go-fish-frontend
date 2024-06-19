@@ -60,13 +60,25 @@
   // box-shadow: var(--op-border-bottom) var(--op-color-border);
   border: 1px solid var(--op-color-border);
   border-radius: var(--op-radius-medium);
+
+  background-color: var(--op-color-neutral-plus-eight);
+  color: var(--op-color-neutral-on-plus-eight);
 }
 
 .accordion summary {
   padding: var(--op-space-x-small);
+
+  background-color: var(--op-color-primary-plus-eight);
+  color: var(--op-color-primary-on-plus-eight);
 }
 
 .accordion-content {
+  display: flex;
+  padding: var(--op-space-small) var(--op-space-medium);
+  align-items: flex-start;
+  gap: var(--op-space-x-large);
+  // align-self: stretch;
+
   box-shadow: var(--gf--box-shadow);
   border-radius: 0 0 var(--op-radius-medium) var(--op-radius-medium);
 }
@@ -74,10 +86,11 @@
 
 .game-board__player-decks {
   display: flex;
-  padding: var(--op-space-2x-large) var(--op-space-3x-large) var(--op-space-4x-large) var(--op-space-3x-large);
+  padding: var(--op-space-2x-large) var(--op-space-3x-large) 0 var(--op-space-3x-large);
   flex-direction: column;
   gap: var(--op-space-x-small);
   align-self: stretch;
+  overflow: auto;
 }
 
 .game-feed {
