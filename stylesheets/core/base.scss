@@ -62,6 +62,8 @@
 .accordion {
   border-radius: var(--op-radius-medium);
   border: var(--op-border-width) solid var(--op-color-border);
+
+  box-shadow: 0px 25px 20px -35px var(--op-color-primary-minus-six);
 }
 
 .accordion[open] {
