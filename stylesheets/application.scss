@@ -5,9 +5,16 @@
 @import 'core/theme/gabriel-dark-theme-core';
 
 // Core Customization
-@import 'core/base';
 @import 'core/layout';
 @import 'core/utilities';
+
+// components
+@import 'components/gf-panel';
+@import 'components/accordion';
+@import 'components/notifications';
+@import 'components/actions';
+@import 'components/card-tray';
+@import 'components/playing-card';
 
 // General Styles
 @import 'general/variables';
