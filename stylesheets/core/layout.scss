@@ -34,6 +34,8 @@
 .player-hand,
 .player-books {
   display: grid;
+  // TODO: Ask why this is needed here????
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
 
   background-color: var(--op-color-neutral-plus-seven);
