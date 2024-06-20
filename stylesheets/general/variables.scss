@@ -1,0 +1,8 @@
+// General Variables
+:root {
+  --gf-main-column-width: calc(84 * var(--op-size-unit));
+  --gf-main-row-height: calc(64 * var(--op-size-unit));
+  --gf-box-shadow: var(--op-border-all) var(--op-color-border);
+  --gf-header-size: calc(15 * var(--op-size-unit)); // 60px
+  --gf-playing-card-radius: calc(2 * var(--op-size-unit));
+}

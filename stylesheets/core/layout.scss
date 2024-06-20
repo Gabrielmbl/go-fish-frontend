@@ -1,0 +1,53 @@
+// Layouts
+.game-view {
+  display: grid;
+  grid-template-columns: 1fr var(--gf-main-column-width);
+  grid-template-rows: 1fr var(--gf-main-row-height);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  overflow: auto;
+}
+
+.game-board,
+.game-feed {
+  display: grid;
+  grid-template-rows: var(--gf-header-size) 1fr;
+  overflow: auto;
+}
+
+.game-board {
+  grid-area: 1 / 1 / 2 / 2;
+
+  box-shadow: var(--gf-box-shadow);
+  overflow: auto;
+}
+
+.game-feed {
+  grid-area: 1 / 2 / 2 / 3;
+
+  box-shadow: var(--gf-box-shadow);
+  background-color: var(--op-color-primary-plus-eight);
+  color: var(--op-color-primary-on-plus-eight);
+}
+
+.player-hand,
+.player-books {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  background-color: var(--op-color-neutral-plus-seven);
+  color: var(--op-color-neutral-on-plus-seven);
+}
+
+.player-hand {
+  grid-area: 2 / 1 / 3 / 2;
+
+  box-shadow: var(--gf-box-shadow);
+  overflow: auto;
+}
+
+.player-books {
+  grid-area: 2 / 2 / 3 / 3;
+  box-shadow: var(--gf-box-shadow);
+}
