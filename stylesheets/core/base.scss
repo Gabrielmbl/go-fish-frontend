@@ -118,6 +118,9 @@
 .message {
   padding: var(--op-space-small);
   border-radius: var(--op-radius-x-large);
+
+  font-size: var(--op-font-x-small);
+  font-weight: var(--op-font-weight-semi-bold);
 }
 
 .indented-message {
@@ -130,11 +133,16 @@
 .blue-message {
   background: var(--op-color-primary-plus-five);
   color: var(--op-color-primary-on-plus-five);
+
+  font-size: var(--op-font-medium);
+  font-weight: var(--op-font-weight-normal);
 }
 
 .yellow-message {
   background: var(--op-color-alerts-warning-plus-seven);
   color: var(--op-color-alerts-warning-on-plus-seven);
+
+  color: var(--op-color-alerts-warning-on-plus-seven-alt);
 }
 
 .white-message {
