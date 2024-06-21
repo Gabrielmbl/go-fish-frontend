@@ -15,9 +15,7 @@
     font-weight: var(--op-font-weight-semi-bold);
     box-shadow: var(--op-shadow-x-large);
 
-    // TODO: Change to what the message actually represents
-    // Reply, response, action
-    &.message--blue {
+    &.message--action {
       background: var(--op-color-primary-plus-five);
       color: var(--op-color-primary-on-plus-five);
 
@@ -25,14 +23,14 @@
       font-weight: var(--op-font-weight-normal);
     }
 
-    &.message--yellow {
+    &.message--reply {
       background: var(--op-color-alerts-warning-plus-seven);
       color: var(--op-color-alerts-warning-on-plus-seven);
 
       color: var(--op-color-alerts-warning-on-plus-seven-alt);
     }
 
-    &.message--white {
+    &.message--response {
       background: var(--op-color-primary-plus-max);
       color: var(--op-color-primary-on-plus-max);
     }

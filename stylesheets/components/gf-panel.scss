@@ -22,9 +22,7 @@
       height: var(--op-navbar-height);
     }
 
-    // TODO: Name to header title -> what it is generically rather than what it does specifically
-    &.gf-panel__header--hand,
-    &.gf-panel__header--book {
+    &.gf-panel__header-title {
       align-content: center;
 
       font-size: var(--op-font-small);
