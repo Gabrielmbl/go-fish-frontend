@@ -15,7 +15,8 @@
     font-weight: var(--op-font-weight-semi-bold);
     box-shadow: var(--op-shadow-x-large);
 
-
+    // TODO: Change to what the message actually represents
+    // Reply, response, action
     &.message--blue {
       background: var(--op-color-primary-plus-five);
       color: var(--op-color-primary-on-plus-five);

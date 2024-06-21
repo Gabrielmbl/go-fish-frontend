@@ -2,6 +2,7 @@
 @import '@rolemodel/optics';
 
 // Theme Customization
+@import 'core/theme/gf-theme-core';
 @import 'core/theme/gabriel-dark-theme-core';
 
 // Core Customization
@@ -15,6 +16,3 @@
 @import 'components/actions';
 @import 'components/card-tray';
 @import 'components/playing-card';
-
-// General Styles
-@import 'general/variables';
