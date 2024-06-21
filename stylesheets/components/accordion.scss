@@ -3,11 +3,13 @@
   border-radius: var(--op-radius-medium);
   border: var(--op-border-width) solid var(--op-color-border);
 
-  box-shadow: 0px 25px 20px -35px var(--op-color-primary-minus-six);
+  box-shadow: var(--op-shadow-x-small);
 }
 
 .accordion[open] {
   border: var(--op-border-width) solid var(--op-color-primary-plus-four);
+
+  box-shadow: var(--op-shadow-x-large);
 
   summary {
     border-bottom: var(--op-border-width) solid var(--op-color-primary-plus-four);
